@@ -1,2 +1,0 @@
-This idea is from SHR, essentially anything that's mechanic based happens within your playbook, and the inputs and outputs of those mechanical processes are narrative.
-GM tells you narrative effect, you use mechanics to process and produce
