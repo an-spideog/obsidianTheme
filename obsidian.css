@@ -1,1 +1,294 @@
-@import url("/Users/Louis/Documents/ObsidianTheme/obsidian.css");
+/* Test */
+.theme-dark{ /*Colours */
+    --default-font: 'Fira Code', monospace;
+    --background-primary: black;
+    --background-primary-alt: #1f1d1f;
+    --background-secondary: black;
+    --background-secondary-alt: black;
+    --background-accent: yellow;
+    --text-normal: #fff;
+    --text-accent: #e7b7b7;
+    --text-accent-hover: #dba6a6;
+    --interactive-accent: #e7b7b7;
+    --interactive-accent-hover: #dba6a6;
+    --interactive-accent-rgb: 231, 183, 183;
+    --blue: #a3e6f5;
+    --blue-hover: #8ad6e7;
+    --seedling: #B3EFB3;
+    --tree: #88df88;
+    --evergreen: #44b844;
+    --code: #a3f1a3;
+    --yellow: #F3E3A0;
+    --orange: #FBC99D;
+    --purple: #EBDAFB;
+    --pink: #FEDDF4;
+}
+/* TODO: Format literally any of this, I mean it's an actual hecking mess */
+/* Editor */
+  /* Links */
+    /* Internal */
+      a:-webkit-any-link { /* does this make the others redundant? */
+        text-decoration:none;
+      }
+
+      .markdown-preview-view .internal-link {
+        text-decoration: none !important;
+     }
+    /* External */
+      .cm-s-obsidian span.cm-url {
+        color: var(--blue);
+        text-decoration: none;
+      }
+
+      .external-link {
+        background-image: none;
+        padding-right: 0;
+        color: var(--blue);
+        text-decoration: none;
+      }
+      .external-link:hover {
+        color: var(--blue-hover);
+      }
+  /* Tags */
+
+    /* All Tags */
+      .cm-header-1 {
+        color: var(--text-accent);
+      }
+
+      .cm-s-obsidian span.cm-hashtag {
+        color: var(--text-accent);
+        text-decoration: none;
+      }
+
+      .cm-s-obsidian span.cm-hashtag {
+        color: var(--text-accent);
+        text-decoration: none;
+      }
+
+      .tag {
+        background-color: var(--text-accent);
+        border: none;
+        color: black;
+        font-size: 11px;
+        padding: 1px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0px 0px;
+        cursor: pointer;
+        border-radius: 14px;
+        }
+
+        .tag:hover {
+        color: black;
+        background-color: var(--text-accent-hover);
+        }
+
+    /* Tag Colours !!!!! Insert your tags here for cusotm tag colours !!!!!! */
+      .tag[href^="#TTRPG"] {
+        background-color: var(--yellow);
+      }
+      .tag[href^="#important"] {
+        background-color: red;
+      }
+      .tag[href^="#complete"] {
+        background-color: green;
+      }
+      .tag[href^="#inprogress"] {
+        background-color: orange;
+      }
+      .tag[href^="#Evergreen"] {
+        background-color: var(--evergreen);
+      }
+      .tag[href^="#MOC"] {
+        background-color: var(--blue);
+      }
+      .tag[href^="#Seedling"] {
+        background-color: var(--seedling);
+      }
+      .tag[href^="#Tree"] {
+        background-color: var(--tree);
+      }
+
+      .tag[href^="#Index"] {
+        background-color: var(--purple);
+      }
+
+
+  /* Text */
+    /* Code */
+      .CodeMirror .cm-inline-code, .CodeMirror .cm-math {
+        color: var(--code);
+      }
+      .cm-s-obsidian span.cm-inline-code {
+        color: var(--code);
+      }
+      .markdown-preview-view code {
+        color: var(--code)
+      }
+
+  /* Headers */
+    .markdown-preview-view h1 {
+      color: var(--text-accent);
+    }
+  /* Other */
+    /* Bullets */
+      ul {
+        list-style-type: disc !important;
+      }
+
+/* Graph View */
+  .graph-view.color-fill {
+    color: var(--text-normal);
+  }
+  .graph-view.color-circle {
+    color: var(--text-normal);
+  }
+  .graph-view.color-line {
+    color: var(--background-modifier-border);
+  }
+  .graph-view.color-text {
+    color: var(--text-normal);
+  }
+  .graph-view.color-fill-highlight {
+    color: var(--interactive-accent);
+    }
+  .graph-view.color-line-highlight {
+      color: rgb(var(--interactive-accent-rgb));
+  }
+  .graph-view.color-circle-highlight {
+    color: rgb(var(--interactive-accent-rgb));
+  }
+
+
+/* I think this is irrelevant but I'll leave it in here in case something breaks */
+  /* font for everything outside of editor/preview panes */
+/*.app-container {
+  font-family: var(--font-family-preview);
+}
+
+/* normal text outside of headings and code of editor */
+/*.cm-s-obsidian, .mod-single-child .cm-s-obsidian {
+  font-family: var(--font-family-editor);
+}
+
+/* normal text outside of headings and code of preview */
+/*.markdown-preview-view, .mod-single-child .markdown-preview-view {
+  font-family: var(--font-family-editor);
+}*/
+
+
+/* This is the bullet relation lines, not mine */
+  .cm-hmd-list-indent .cm-tab, ul ul { position: relative; }
+  .cm-hmd-list-indent .cm-tab::before, ul ul::before {
+  content:'';
+  border-left: 1px solid var(--background-primary-alt);
+  position: absolute;
+  }
+  .cm-hmd-list-indent .cm-tab::before { left: 0; top: -5px; bottom: -4px;
+  }
+  ul ul::before { left: -11px; top: 0; bottom: 0;
+  }
+
+
+
+.suggestion-item.is-selected {
+  background-color: var(--background-primary-alt);
+}
+
+/* This is the sideways title thing, I didn't make it */
+    /* Andy Matuschak modev 2.7 */
+  /* Everything under .mod-root now. Don't want Andy messing with sidebars */
+  /* also, Andy only makes sense for vertical splits, at the root level, right? */
+
+  .mod-root.workspace-split.mod-vertical {
+    overflow-x:auto;
+    --header-width: 36px; /* <- 36px is the header height in the default theme */
+  }
+  .mod-root.workspace-split.mod-vertical > div {
+    min-width: calc(300px + var(--header-width)); /* <-- 700px is the default theme's "readable" max-width */
+    box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.25);
+    position:sticky;
+    left:0;
+  }
+
+  /* shift sticky position, so titles will stack up to the left */
+  /* This will currently stack to a maximum of 10 before resetting */
+  .mod-root.workspace-split.mod-vertical > div:nth-child(10n-8) { left: calc(var(--header-width) * 0); }
+  .mod-root.workspace-split.mod-vertical > div:nth-child(10n-7) { left: calc(var(--header-width) * 1); }
+  .mod-root.workspace-split.mod-vertical > div:nth-child(10n-6) { left: calc(var(--header-width) * 2); }
+  .mod-root.workspace-split.mod-vertical > div:nth-child(10n-5) { left: calc(var(--header-width) * 3); }
+  .mod-root.workspace-split.mod-vertical > div:nth-child(10n-4) { left: calc(var(--header-width) * 4); }
+  .mod-root.workspace-split.mod-vertical > div:nth-child(10n-3) { left: calc(var(--header-width) * 5); }
+  .mod-root.workspace-split.mod-vertical > div:nth-child(10n-2) { left: calc(var(--header-width) * 6); }
+  .mod-root.workspace-split.mod-vertical > div:nth-child(10n-1) { left: calc(var(--header-width) * 7); }
+  .mod-root.workspace-split.mod-vertical > div:nth-child(10n+0) { left: calc(var(--header-width) * 8); }
+  .mod-root.workspace-split.mod-vertical > div:nth-child(10n+1) { left: calc(var(--header-width) * 9); }
+
+  /* now it's time for the fancy vertical titles */
+
+  /* first we'll add a bit of gap for the title to sit inside of */
+  .workspace-leaf-content {
+    padding-left: var(--header-width);
+    position: relative;
+  }
+
+  /* this is where the magic happens */
+  .view-header {
+    writing-mode: vertical-lr;
+    border-right: 1px solid var(--background-secondary-alt);
+    border-left: 2px solid var(--background-secondary-alt);
+    border-top: none;
+    border-bottom: none;
+    height: auto;
+    width: var(--header-width);
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+  }
+
+  /* active titles have different border colours */
+  .workspace-leaf.mod-active .view-header {
+    border-right: 2px solid var(--interactive-accent);
+    border-bottom: none;
+  }
+
+  /* unset the title container height and swap padding */
+  .view-header-title-container {
+    height: unset;
+    padding-left: unset;
+    padding-top: 5px;
+  }
+
+  /* fix the long-title-obscuring shadows */
+  .view-header-title-container:after {
+    width: 100%;
+    height: 30px;
+    top:unset;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, var(--background-secondary));
+  }
+  .workspace-leaf.mod-active .view-header-title-container:after {
+    background: linear-gradient(to bottom, transparent, var(--background-primary-alt));
+  }
+
+  /* swap the padding/margin around for the header and actions icons */
+  .view-header-icon, .view-actions {
+    padding: 10px 5px;
+  }
+  .view-action {
+    margin: 8px 0;
+  }
+
+  /* get rid of the gap left by the now-missing horizontal title */
+  .view-content {
+    height: 100%;
+  }
+
+  /* make the fake drop target overlay have a background so you can see it. */
+  /* TODO: figure out how the fake target overlay works so we can put the title back, too */
+  .workspace-fake-target-overlay {
+    background-color: var(--background-primary);
+  }

@@ -1,0 +1,38 @@
+{
+  "theme": "obsidian",
+  "pluginEnabledStatus": {
+    "file-explorer": true,
+    "global-search": true,
+    "switcher": true,
+    "graph": true,
+    "backlink": true,
+    "command-palette": true,
+    "markdown-importer": true,
+    "word-count": true,
+    "random-note": true,
+    "daily-notes": true,
+    "zk-prefixer": true,
+    "custom-css": true,
+    "tag-pane": true,
+    "page-preview": true,
+    "outline": true
+  },
+  "isSidebarCollapsed": false,
+  "isRightSidedockCollapsed": true,
+  "lastOpenSidebarTab": "File explorer",
+  "foldHeading": true,
+  "hotkeys": {
+    "daily-notes": [
+      {
+        "modifiers": [
+          "Mod",
+          "Shift"
+        ],
+        "key": "e"
+      }
+    ]
+  },
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "showLineNumber": true
+}
