@@ -2,10 +2,10 @@
 .theme-dark{ /*Colours */
     --default-font: 'Fira Code', monospace;
     --background-primary: black;
-    --background-primary-alt: #1f1d1f;
+    --background-primary-alt: #181718;
     --background-secondary: black;
     --background-secondary-alt: black;
-    --background-accent: yellow;
+    --background-accent: black;
     --text-normal: #fff;
     --text-accent: #e7b7b7;
     --text-accent-hover: #dba6a6;
@@ -137,6 +137,23 @@
       ul {
         list-style-type: disc !important;
       }
+    /* popup */
+      .modal.mod-settings .modal-content {
+        background-color: var(--background-primary-alt);
+      }
+      .horizontal-tab-content, .vertical-tab-content {
+        background-color: var(--background-primary-alt);
+      }
+      .vertical-tab-header {
+        background-color: var(--background-primary-alt);
+      }
+      .horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
+        background-color: var(--background-primary-alt);
+      }
+      .horizontal-tab-nav-item, .vertical-tab-nav-item {
+        background-color: var(--background-primary-alt);
+      }
+
 
 /* Graph View */
   .graph-view.color-fill {
