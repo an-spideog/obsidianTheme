@@ -1,5 +1,12 @@
 /* Test 2*/
 .theme-dark{ /*Colours */
+
+    --yellow: #f3e57f;
+    --orange: #ffd4a6;
+    --pink: #ffc6e2;
+    --magenta: #ffabe9;
+    --purple: #db8ae6;
+    --violet: #deb8f2;
     --default-font: 'Fira Code', monospace;
     --background-primary: black;
     --background-primary-alt: #141313;
@@ -7,21 +14,19 @@
     --background-secondary-alt: black;
     --background-accent: black;
     --text-normal: #fff;
-    --text-accent: #e7b7b7;
-    --text-accent-hover: #dba6a6;
-    --interactive-accent: #e7b7b7;
-    --interactive-accent-hover: #dba6a6;
-    --interactive-accent-rgb: 231, 183, 183;
-    --blue: #a3e6f5;
-    --blue-hover: #8ad6e7;
-    --seedling: #B3EFB3;
-    --tree: #88df88;
-    --evergreen: #44b844;
-    --code: #a3f1a3;
-    --yellow: #F3E3A0;
-    --orange: #FBC99D;
-    --purple: #EBDAFB;
-    --pink: #FEDDF4;
+    --text-accent: var(--pink);
+    --text-accent-hover: darken(var(--pink), 5%);
+    --text-on-accent: black;
+    --interactive-accent: var(--yellow);
+    --interactive-accent-hover: darken(var(--yellow), 5%);
+    --interactive-accent-rgb: var(--yellow);
+    --blue: var(--violet);
+    --blue-hover: darken(var(--violet), 5%);
+    --seedling: var(--pink);
+    --tree: var(--magenta);
+    --evergreen: var(--purple);
+    --code: var(--orange);
+
     --text-highlight-bg: rgba(231, 183, 183, 0.62)
 }
 /* TODO: Format literally any of this, I mean it's an actual hecking mess */
@@ -53,18 +58,46 @@
   /* Tags */
 
     /* All Tags */
-      .cm-s-obsidian span.cm-hashtag {
-        color: var(--text-accent);
+    /*  .cm-s-obsidian span.cm-hashtag {
+        background-color: var(--text-accent);
+        border: none;
+        color: black;
+        font-size: 11px;
+        padding: 1px 8px;
+        text-align: center;
         text-decoration: none;
-      }
+        display: inline-block;
+        margin: 0px 0px;
+        cursor: pointer;
+        border-radius: 14px;
+      }*/
+      /* Tag pills in edit mode */
+.CodeMirror-line span.cm-hashtag-begin {
+  background-color: var(--text-accent);
+  color: black !important;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  padding-left:6px;
+  border-right:none;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-      .cm-s-obsidian span.cm-hashtag {
-        color: var(--text-accent);
-        text-decoration: none;
-      }
+.CodeMirror-line span.cm-hashtag-end {
+  background-color: var(--text-accent);
+  color: black !important;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  padding-right:6px;
+  border-left:none;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+}
 
       .tag {
-        background-color: var(--text-accent);
+        background-color: var(--pink);
         border: none;
         color: black;
         font-size: 11px;
@@ -98,22 +131,58 @@
       .tag[href^="#Evergreen"] {
         background-color: var(--evergreen);
       }
+      .tag[href^="#Tree"] {
+        background-color: var(--magenta);
+      }
+      .tag[href^="#Seedling"] {
+        background-color: var(--pink)
+      }
       .tag[href^="#MOC"] {
         background-color: var(--blue);
       }
-      .tag[href^="#Seedling"] {
+      .tag[href^="#Notes"] {
         background-color: var(--seedling);
       }
-      .tag[href^="#Tree"] {
-        background-color: var(--tree);
+      .tag[href^="#toNote"] {
+        background-color: var(--seedling);
       }
 
-      .tag[href^="#Index"] {
+      .tag[href^="#toVocab"] {
         background-color: var(--purple);
       }
+      .tag[href^="#Vocab"] {
+        background-color: var(--purple);
+      }
+      .tag[href^="#Cues"] {
+        background-color: var(--pink);
+      }
+      .tag[href^="#toCue"] {
+        background-color: var(--pink);
+      }
+      .tag[href^="#toSummarise"] {
+        background-color: var(--yellow);
+      }
+      .tag[href^="#Summary"] {
+        background-color: var(--yellow);
+      }
+
 
 
   /* Text */
+    /* Highlights */
+    .cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
+      color: var(--code);
+      background-color: rgba(0,0,0,0);
+    }
+    .markdown-preview-view mark {
+      color: var(--code);
+      background-color: rgba(0,0,0,0);
+    }
+    .search-result-file-matched-text {
+      color: var(--code);
+      background-color: rgba(0,0,0,0);
+    }
+
     /* Code */
       .CodeMirror .cm-inline-code, .CodeMirror .cm-math {
         color: var(--code);
@@ -131,17 +200,30 @@
 
     /* Headers */
       .markdown-preview-view h1 {
-        color: var(--text-accent);
+        color: var(--yellow);
       }
       .cm-header-1 {
-        color: var(--text-accent);
+        color: var(--yellow);
       }
       .markdown-preview-view h2 {
-        color: var(--text-accent);
+        color: var(--orange);
       }
       .cm-header-2 {
-        color: var(--text-accent);
+        color: var(--orange);
       }
+      .markdown-preview-view h3 {
+        color: var(--pink);
+      }
+      .cm-header-3 {
+        color: var(--pink);
+      }
+      .markdown-preview-view h4 {
+        color: var(--magenta);
+      }
+      .cm-header-4 {
+        color: var(--magenta);
+      }
+
   /* Other */
     /* Bullets */
       ul {
@@ -163,7 +245,7 @@
       .horizontal-tab-nav-item, .vertical-tab-nav-item {
         background-color: var(--background-primary-alt);
       }
-  
+
 
 /* Graph View */
   .graph-view.color-fill {
